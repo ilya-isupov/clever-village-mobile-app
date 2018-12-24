@@ -552,6 +552,16 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@callstack/react-theme-provider@^1.0.7":
+  version "1.0.7"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/@callstack/react-theme-provider/-/react-theme-provider-1.0.7.tgz#2d2fd1a1d965f36165eaa2e4da28aed1ade75484"
+  dependencies:
+    create-react-context "^0.2.1"
+    deepmerge "^2.1.1"
+    flow-copy-source "^1.3.0"
+    hoist-non-react-statics "^2.5.0"
+    prop-types "^15.6.0"
+
 "@expo/bunyan@3.0.2":
   version "3.0.2"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/@expo/bunyan/-/bunyan-3.0.2.tgz#775680bd479a8b79ada4a5676936a58eef1579c9"
@@ -790,7 +800,7 @@
   version "3.0.3"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
 
-"@types/node@*":
+"@types/node@*", "@types/node@^10.12.18":
   version "10.12.18"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/@types/node/-/node-10.12.18.tgz#1d3ca764718915584fcd9f6344621b7672665c67"
 
@@ -813,7 +823,14 @@
     "@types/prop-types" "*"
     "@types/react" "*"
 
-"@types/react-navigation@^3.0.1":
+"@types/react-navigation-material-bottom-tabs@^0.3.0":
+  version "0.3.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/@types/react-navigation-material-bottom-tabs/-/react-navigation-material-bottom-tabs-0.3.0.tgz#0fad19e11c193ae84932500d80687d47cb34e18e"
+  dependencies:
+    "@types/react-native" "*"
+    "@types/react-navigation" "*"
+
+"@types/react-navigation@*", "@types/react-navigation@^3.0.1":
   version "3.0.1"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/@types/react-navigation/-/react-navigation-3.0.1.tgz#374db42a441f4fc50cc0c86a399e41ce4680bfd3"
   dependencies:
@@ -1068,6 +1085,10 @@ array-unique@^0.3.2:
   version "0.3.2"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/array-unique/-/array-unique-0.3.2.tgz#a894b75d4bc4f6cd679ef3244a9fd8f46ae2d428"
 
+arrify@^1.0.0:
+  version "1.0.1"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
+
 art@^0.10.0:
   version "0.10.3"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/art/-/art-0.10.3.tgz#b01d84a968ccce6208df55a733838c96caeeaea2"
@@ -1089,6 +1110,10 @@ assert-plus@1.0.0, assert-plus@^1.0.0:
 assign-symbols@^1.0.0:
   version "1.0.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
+
+async-each@^1.0.0:
+  version "1.0.1"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
 
 async-limiter@~1.0.0:
   version "1.0.0"
@@ -1630,6 +1655,10 @@ big-integer@^1.6.7:
   version "1.6.40"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/big-integer/-/big-integer-1.6.40.tgz#02e4cd4d6e266c4d9ece2469c05cb6439149fc78"
 
+binary-extensions@^1.0.0:
+  version "1.12.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/binary-extensions/-/binary-extensions-1.12.0.tgz#c2d780f53d45bba8317a8902d4ceeaf3a6385b14"
+
 bl@^1.0.0:
   version "1.2.2"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/bl/-/bl-1.2.2.tgz#a160911717103c07410cef63ef51b397c025af9c"
@@ -1683,7 +1712,7 @@ braces@^1.8.2:
     preserve "^0.2.0"
     repeat-element "^1.1.2"
 
-braces@^2.3.1:
+braces@^2.3.0, braces@^2.3.1:
   version "2.3.2"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/braces/-/braces-2.3.2.tgz#5979fd3f14cd531565e5fa2df1abfff1dfaee729"
   dependencies:
@@ -1719,7 +1748,7 @@ buffer-fill@^1.0.0:
   version "1.0.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/buffer-fill/-/buffer-fill-1.0.0.tgz#f8f78b76789888ef39f205cd637f68e702122b2c"
 
-buffer-from@^1.0.0:
+buffer-from@^1.0.0, buffer-from@^1.1.0:
   version "1.1.1"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
 
@@ -1847,6 +1876,25 @@ chardet@^0.4.0:
 charenc@~0.0.1:
   version "0.0.2"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
+
+chokidar@^2.0.0:
+  version "2.0.4"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/chokidar/-/chokidar-2.0.4.tgz#356ff4e2b0e8e43e322d18a372460bbcf3accd26"
+  dependencies:
+    anymatch "^2.0.0"
+    async-each "^1.0.0"
+    braces "^2.3.0"
+    glob-parent "^3.1.0"
+    inherits "^2.0.1"
+    is-binary-path "^1.0.0"
+    is-glob "^4.0.0"
+    lodash.debounce "^4.0.8"
+    normalize-path "^2.1.1"
+    path-is-absolute "^1.0.0"
+    readdirp "^2.0.0"
+    upath "^1.0.5"
+  optionalDependencies:
+    fsevents "^1.2.2"
 
 chownr@^1.0.1, chownr@^1.1.1:
   version "1.1.1"
@@ -2139,6 +2187,13 @@ create-react-context@0.2.2:
     fbjs "^0.8.0"
     gud "^1.0.0"
 
+create-react-context@^0.2.1, create-react-context@^0.2.3:
+  version "0.2.3"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/create-react-context/-/create-react-context-0.2.3.tgz#9ec140a6914a22ef04b8b09b7771de89567cb6f3"
+  dependencies:
+    fbjs "^0.8.0"
+    gud "^1.0.0"
+
 cross-spawn@^5.0.1, cross-spawn@^5.1.0:
   version "5.1.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -2239,6 +2294,10 @@ deepmerge@^1.3.0:
   version "1.5.2"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/deepmerge/-/deepmerge-1.5.2.tgz#10499d868844cdad4fee0842df8c7f6f0c95a753"
 
+deepmerge@^2.1.1:
+  version "2.2.1"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/deepmerge/-/deepmerge-2.2.1.tgz#5d3ff22a01c00f645405a2fbc17d0778a1801170"
+
 define-properties@^1.1.2:
   version "1.1.3"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/define-properties/-/define-properties-1.1.3.tgz#cf88da6cbee26fe6db7094f61d870cbd84cee9f1"
@@ -2306,7 +2365,7 @@ detect-newline@^2.1.0:
   version "2.1.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/detect-newline/-/detect-newline-2.1.0.tgz#f41f1c10be4b00e87b5f13da680759f2c5bfd3e2"
 
-diff@^3.2.0:
+diff@^3.1.0, diff@^3.2.0:
   version "3.5.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
 
@@ -3082,6 +3141,16 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
+flow-copy-source@^1.3.0:
+  version "1.3.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/flow-copy-source/-/flow-copy-source-1.3.0.tgz#591b153f5c01e8fc566c64a97290ea9103b7f1ea"
+  dependencies:
+    chokidar "^2.0.0"
+    fs-extra "^5.0.0"
+    glob "^7.0.0"
+    kefir "^3.7.3"
+    yargs "^11.0.0"
+
 flush-write-stream@^1.0.0:
   version "1.0.3"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/flush-write-stream/-/flush-write-stream-1.0.3.tgz#c5d586ef38af6097650b49bc41b55fabb19f35bd"
@@ -3174,6 +3243,14 @@ fs-extra@^1.0.0:
     jsonfile "^2.1.0"
     klaw "^1.0.0"
 
+fs-extra@^5.0.0:
+  version "5.0.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/fs-extra/-/fs-extra-5.0.0.tgz#414d0110cdd06705734d055652c5411260c31abd"
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-minipass@^1.2.5:
   version "1.2.5"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
@@ -3193,7 +3270,7 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
 
-fsevents@^1.2.3:
+fsevents@^1.2.2, fsevents@^1.2.3:
   version "1.2.4"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/fsevents/-/fsevents-1.2.4.tgz#f41dcb1af2582af3692da36fc55cbd8e1041c426"
   dependencies:
@@ -3272,6 +3349,13 @@ glob-parent@^2.0.0:
   dependencies:
     is-glob "^2.0.0"
 
+glob-parent@^3.1.0:
+  version "3.1.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"
+  dependencies:
+    is-glob "^3.1.0"
+    path-dirname "^1.0.0"
+
 glob-promise@3.4.0:
   version "3.4.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/glob-promise/-/glob-promise-3.4.0.tgz#b6b8f084504216f702dc2ce8c9bc9ac8866fdb20"
@@ -3299,7 +3383,7 @@ glob@^6.0.1:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3:
+glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3:
   version "7.1.3"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/glob/-/glob-7.1.3.tgz#3960832d3f1574108342dafd3a67b332c0969df1"
   dependencies:
@@ -3495,7 +3579,7 @@ hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
   version "2.5.5"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
 
-hoist-non-react-statics@^3.0.1, hoist-non-react-statics@^3.2.1:
+hoist-non-react-statics@^3.0.1, hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.2.1:
   version "3.2.1"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/hoist-non-react-statics/-/hoist-non-react-statics-3.2.1.tgz#c09c0555c84b38a7ede6912b61efddafd6e75e1e"
   dependencies:
@@ -3711,6 +3795,12 @@ is-arrayish@^0.3.1:
   version "0.3.2"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/is-arrayish/-/is-arrayish-0.3.2.tgz#4574a2ae56f7ab206896fb431eaeed066fdf8f03"
 
+is-binary-path@^1.0.0:
+  version "1.0.1"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/is-binary-path/-/is-binary-path-1.0.1.tgz#75f16642b480f187a711c814161fd3a4a7655898"
+  dependencies:
+    binary-extensions "^1.0.0"
+
 is-buffer@^1.1.5, is-buffer@~1.1.1:
   version "1.1.6"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
@@ -3789,6 +3879,10 @@ is-extglob@^1.0.0:
   version "1.0.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/is-extglob/-/is-extglob-1.0.0.tgz#ac468177c4943405a092fc8f29760c6ffc6206c0"
 
+is-extglob@^2.1.0, is-extglob@^2.1.1:
+  version "2.1.1"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/is-extglob/-/is-extglob-2.1.1.tgz#a88c02535791f02ed37c76a1b9ea9773c833f8c2"
+
 is-finite@^1.0.0:
   version "1.0.2"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/is-finite/-/is-finite-1.0.2.tgz#cc6677695602be550ef11e8b4aa6305342b6d0aa"
@@ -3810,6 +3904,18 @@ is-glob@^2.0.0, is-glob@^2.0.1:
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/is-glob/-/is-glob-2.0.1.tgz#d096f926a3ded5600f3fdfd91198cb0888c2d863"
   dependencies:
     is-extglob "^1.0.0"
+
+is-glob@^3.1.0:
+  version "3.1.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/is-glob/-/is-glob-3.1.0.tgz#7ba5ae24217804ac70707b96922567486cc3e84a"
+  dependencies:
+    is-extglob "^2.1.0"
+
+is-glob@^4.0.0:
+  version "4.0.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/is-glob/-/is-glob-4.0.0.tgz#9521c76845cc2610a85203ddf080a958c2ffabc0"
+  dependencies:
+    is-extglob "^2.1.1"
 
 is-number@^2.1.0:
   version "2.1.0"
@@ -4090,6 +4196,12 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+kefir@^3.7.3:
+  version "3.8.5"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/kefir/-/kefir-3.8.5.tgz#ce8d952707ea833d9d995a96b92daa744dea83ba"
+  dependencies:
+    symbol-observable "1.0.4"
+
 keyv@3.0.0:
   version "3.0.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/keyv/-/keyv-3.0.0.tgz#44923ba39e68b12a7cec7df6c3268c031f2ef373"
@@ -4180,6 +4292,10 @@ lock@^0.1.2:
 lodash.assign@^4.2.0:
   version "4.2.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
+
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 
 lodash.isobject@^3.0.2:
   version "3.0.2"
@@ -4290,6 +4406,10 @@ make-dir@^1.0.0:
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/make-dir/-/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
   dependencies:
     pify "^3.0.0"
+
+make-error@^1.1.1:
+  version "1.3.5"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/make-error/-/make-error-1.3.5.tgz#efe4e81f6db28cadd605c70f29c831b58ef776c8"
 
 make-fetch-happen@^4.0.1:
   version "4.0.1"
@@ -4622,7 +4742,7 @@ micromatch@^2.3.11:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-micromatch@^3.1.4:
+micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/micromatch/-/micromatch-3.1.10.tgz#70859bc95c9840952f359a068a3fc49f9ecfac23"
   dependencies:
@@ -5265,6 +5385,10 @@ pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
 
+path-dirname@^1.0.0:
+  version "1.0.2"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/path-dirname/-/path-dirname-1.0.2.tgz#cc33d24d525e099a5388c0336c6e32b9160609e0"
+
 path-exists@^3.0.0:
   version "3.0.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
@@ -5637,6 +5761,16 @@ react-native-maps@expo/react-native-maps#v0.22.1-exp.0:
   version "0.22.1"
   resolved "https://codeload.github.com/expo/react-native-maps/tar.gz/e6f98ff7272e5d0a7fe974a41f28593af2d77bb2"
 
+react-native-paper@^2.4.0:
+  version "2.4.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/react-native-paper/-/react-native-paper-2.4.0.tgz#21bbdf44bfa5f16420155bbcc5a4665986edfef2"
+  dependencies:
+    "@callstack/react-theme-provider" "^1.0.7"
+    color "^2.0.1"
+    create-react-context "^0.2.3"
+    hoist-non-react-statics "^3.1.0"
+    react-lifecycles-compat "^3.0.4"
+
 react-native-reanimated@1.0.0-alpha.10:
   version "1.0.0-alpha.10"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/react-native-reanimated/-/react-native-reanimated-1.0.0-alpha.10.tgz#e9e6fb35a2cf52fdc912b9fbc76f34f80698e530"
@@ -5689,6 +5823,14 @@ react-native-typescript-transformer@^1.2.11:
 react-native-vector-icons@6.0.0:
   version "6.0.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/react-native-vector-icons/-/react-native-vector-icons-6.0.0.tgz#3a7076dbe244ea94c6d5e92802a870e64a4283c5"
+  dependencies:
+    lodash "^4.0.0"
+    prop-types "^15.6.2"
+    yargs "^8.0.2"
+
+react-native-vector-icons@^6.1.0:
+  version "6.1.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/react-native-vector-icons/-/react-native-vector-icons-6.1.0.tgz#770a3f8ced692d75deb3afbb9829195ceed1eedd"
   dependencies:
     lodash "^4.0.0"
     prop-types "^15.6.2"
@@ -5760,9 +5902,26 @@ react-navigation-drawer@1.0.5:
   dependencies:
     react-native-tab-view "^1.2.0"
 
+react-navigation-material-bottom-tabs@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/react-navigation-material-bottom-tabs/-/react-navigation-material-bottom-tabs-1.0.0.tgz#4fc3f21c57891e3a5bff88679afd84801d69adb7"
+  dependencies:
+    hoist-non-react-statics "^2.5.0"
+    prop-types "^15.6.0"
+    react-navigation-tabs "1.0.0"
+
 react-navigation-stack@1.0.6:
   version "1.0.6"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/react-navigation-stack/-/react-navigation-stack-1.0.6.tgz#5c2b6617dccc1de6001b387cd967baa6b205132d"
+
+react-navigation-tabs@1.0.0:
+  version "1.0.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/react-navigation-tabs/-/react-navigation-tabs-1.0.0.tgz#f9fe3eb8b77787551d017d1279ec049c3bed4950"
+  dependencies:
+    hoist-non-react-statics "^2.5.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
+    react-native-tab-view "^1.0.0"
 
 react-navigation-tabs@1.0.2:
   version "1.0.2"
@@ -5857,7 +6016,7 @@ read-pkg@^4.0.1:
     parse-json "^4.0.0"
     pify "^3.0.0"
 
-"readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.4, readable-stream@^2.0.6, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.3.0, readable-stream@^2.3.5, readable-stream@~2.3.6:
+"readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.4, readable-stream@^2.0.6, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.3.0, readable-stream@^2.3.5, readable-stream@~2.3.6:
   version "2.3.6"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
   dependencies:
@@ -5868,6 +6027,14 @@ read-pkg@^4.0.1:
     safe-buffer "~5.1.1"
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
+
+readdirp@^2.0.0:
+  version "2.2.1"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/readdirp/-/readdirp-2.2.1.tgz#0e87622a3325aa33e892285caf8b4e846529a525"
+  dependencies:
+    graceful-fs "^4.1.11"
+    micromatch "^3.1.10"
+    readable-stream "^2.0.2"
 
 redux-axios-middleware@^4.0.0:
   version "4.0.0"
@@ -6367,7 +6534,7 @@ source-map-support@0.4.18, source-map-support@^0.4.15:
   dependencies:
     source-map "^0.5.6"
 
-source-map-support@0.5.9, source-map-support@^0.5.9:
+source-map-support@0.5.9, source-map-support@^0.5.6, source-map-support@^0.5.9:
   version "0.5.9"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/source-map-support/-/source-map-support-0.5.9.tgz#41bc953b2534267ea2d605bccfa7bfa3111ced5f"
   dependencies:
@@ -6611,6 +6778,10 @@ symbol-observable@1.0.1:
   version "1.0.1"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
 
+symbol-observable@1.0.4:
+  version "1.0.4"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
+
 symbol-observable@^1.0.4, symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
@@ -6788,6 +6959,19 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
+ts-node@^7.0.1:
+  version "7.0.1"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/ts-node/-/ts-node-7.0.1.tgz#9562dc2d1e6d248d24bc55f773e3f614337d9baf"
+  dependencies:
+    arrify "^1.0.0"
+    buffer-from "^1.1.0"
+    diff "^3.1.0"
+    make-error "^1.1.1"
+    minimist "^1.2.0"
+    mkdirp "^0.5.1"
+    source-map-support "^0.5.6"
+    yn "^2.0.0"
+
 tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
@@ -6921,6 +7105,10 @@ untildify@3.0.3:
 unzip-response@^2.0.1:
   version "2.0.1"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/unzip-response/-/unzip-response-2.0.1.tgz#d2f0f737d16b0615e72a6935ed04214572d56f97"
+
+upath@^1.0.5:
+  version "1.1.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/upath/-/upath-1.1.0.tgz#35256597e46a581db4793d0ce47fa9aebfc9fabd"
 
 uri-js@^4.2.2:
   version "4.2.2"
@@ -7248,6 +7436,29 @@ yargs-parser@^7.0.0:
   dependencies:
     camelcase "^4.1.0"
 
+yargs-parser@^9.0.2:
+  version "9.0.2"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/yargs-parser/-/yargs-parser-9.0.2.tgz#9ccf6a43460fe4ed40a9bb68f48d43b8a68cc077"
+  dependencies:
+    camelcase "^4.1.0"
+
+yargs@^11.0.0:
+  version "11.1.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/yargs/-/yargs-11.1.0.tgz#90b869934ed6e871115ea2ff58b03f4724ed2d77"
+  dependencies:
+    cliui "^4.0.0"
+    decamelize "^1.1.1"
+    find-up "^2.1.0"
+    get-caller-file "^1.0.1"
+    os-locale "^2.0.0"
+    require-directory "^2.1.1"
+    require-main-filename "^1.0.1"
+    set-blocking "^2.0.0"
+    string-width "^2.0.0"
+    which-module "^2.0.0"
+    y18n "^3.2.1"
+    yargs-parser "^9.0.2"
+
 yargs@^12.0.1:
   version "12.0.5"
   resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/yargs/-/yargs-12.0.5.tgz#05f5997b609647b64f66b81e3b4b10a368e7ad13"
@@ -7300,6 +7511,10 @@ yargs@^9.0.0:
     which-module "^2.0.0"
     y18n "^3.2.1"
     yargs-parser "^7.0.0"
+
+yn@^2.0.0:
+  version "2.0.0"
+  resolved "https://artifactorycn.netcracker.com/api/npm/pd.sandbox-release.npm.group/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
 
 zen-observable-ts@^0.8.6:
   version "0.8.13"

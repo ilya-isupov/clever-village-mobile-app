@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { createSwitchNavigator, createAppContainer } from "react-navigation";
+import { createAppContainer } from "react-navigation";
+import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
 import { ApplicationProps } from "./models/application-props.model";
 import { ApplicationState } from "./models/application-state.model";
 
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const AppNavigator = createSwitchNavigator({
+const AppNavigator = createMaterialBottomTabNavigator({
   Home: HomeScreen,
   Settings: SettingsScreen
 }, {
