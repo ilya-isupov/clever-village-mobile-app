@@ -1,3 +1,3 @@
 export interface ApplicationState {
-    login: string | null;
+    login: string;
 }

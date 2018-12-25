@@ -12,7 +12,7 @@ export class AuthScreen extends React.Component<ApplicationProps, ApplicationSta
     };
 
     _storeAuthentification = async () => {
-        await AsyncStorage.setItem("userLogin", "test");
+        await AsyncStorage.setItem("userLogin", this.state.login);
         this.props.navigation.navigate("Home");
     }
 

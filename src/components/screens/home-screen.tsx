@@ -11,15 +11,21 @@ export class HomeScreen extends React.Component<ApplicationProps, ApplicationSta
     title: Locale.navigation.home
   };
 
+  state = {
+    login: ""
+  };
+
   componentDidMount() {
     this.loadLogin();
   }
 
   loadLogin = async () => {
     await AsyncStorage.getItem("userLogin").then((login: string | null) => {
-      this.setState({
-        login: login
-      });
+      if (login !== null) {
+        this.setState({
+          login: login
+        });
+      }
     });
   }
 
