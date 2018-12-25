@@ -1,6 +1,10 @@
 export const Locale = {
     navigation: {
         home: "Домой",
-        settings: "Настройки"
+        settings: "Настройки",
+        auth: "Вход"
+    },
+    buttons: {
+        auth: "Вход"
     }
 };

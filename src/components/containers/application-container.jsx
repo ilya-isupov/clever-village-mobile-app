@@ -1,5 +1,6 @@
-import { ApplicationNavigator } from "../navigation/application-navigation";
+
 import { createAppContainer } from "react-navigation";
+import { MainNavigator } from "../navigation/auth-navigation";
 
 
-export const ApplicationContainer = createAppContainer(ApplicationNavigator);
+export const ApplicationContainer = createAppContainer(MainNavigator);

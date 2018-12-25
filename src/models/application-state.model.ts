@@ -1,3 +1,3 @@
 export interface ApplicationState {
-    testNav: any;
+    login: string | null;
 }
