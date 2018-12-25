@@ -8,15 +8,11 @@
     "test": "jest",
     "lint": "tslint src/**/*.ts",
     "tsc": "tsc",
+    "tscWatch": "tsc -w",
     "build": "yarn run clean && yarn run tsc",
+    "buildWatch": "yarn run build && yarn run tsc -w",
     "clean": "rimraf dist",
-    "watch": "yarn run build -- -w",
-    "watchAndRunAndroid": "concurrently \"yarn run watch\" \"yarn run android\"",
-    "buildRunAndroid": "yarn run build && yarn run watchAndRunAndroid ",
-    "watchAndRunIOS": "concurrently \"yarn run watch\" \"yarn run ios\"",
-    "buildRunIOS": "yarn run build && yarn run watchAndRunIOS ",
-    "watchAndStart": "concurrently \"yarn run watch\" \"yarn run start\"",
-    "buildAndStart": "yarn run build && yarn run start"
+    "dev": "yarn run build && concurrently \"yarn run tscWatch \" \"yarn run start\" "
   },
   "dependencies": {
     "axios": "^0.18.0",
