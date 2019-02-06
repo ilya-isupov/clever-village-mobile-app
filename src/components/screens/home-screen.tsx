@@ -1,18 +1,18 @@
 import React from "react";
 import { ApplicationProps } from "../../models/application-props.model";
 import { ApplicationState } from "../../models/application-state.model";
-import { Text, View, AsyncStorage } from "react-native";
+import { Text, View, AsyncStorage, NativeSyntheticEvent, NativeTouchEvent } from "react-native";
+import { Button, Icon, Card } from "react-native-elements";
 import { MainStyles } from "../styles/main-styles";
 import { Locale } from "../localization/locale";
 
 export class HomeScreen extends React.Component<ApplicationProps, ApplicationState> {
   static navigationOptions = {
     tabBarLabel: Locale.navigation.home,
-    title: Locale.navigation.home
-  };
-
-  state = {
-    login: ""
+    title: Locale.navigation.home,
+    tabBarIcon: () => (
+      <Icon name="home" size={28} color="#000" />
+    )
   };
 
   componentDidMount() {
@@ -21,20 +21,36 @@ export class HomeScreen extends React.Component<ApplicationProps, ApplicationSta
 
   loadLogin = async () => {
     await AsyncStorage.getItem("userLogin").then((login: string | null) => {
-      if (login !== null) {
-        this.setState({
-          login: login
-        });
-      }
+      //
+    });
+  }
+
+  getStatus = async (event: NativeSyntheticEvent<NativeTouchEvent>) => {
+    await AsyncStorage.getItem("controllerPhone").then((phone: string) => {
+      //
     });
   }
 
   render() {
     return (
       <View style={MainStyles.container}>
-        <Text>Widgets screen</Text>
-        <Text>Login: {this.state.login}</Text>
-        <Text onPress={() => { this.props.navigation.navigate("Settings"); }}>Go to settings screen</Text>
+        <Button buttonStyle={{
+          ...MainStyles.button,
+          width: 250,
+          height: 60
+        }} title="Получить статус" onPress={this.getStatus}></Button>
+        <Card containerStyle={MainStyles.card} title={Locale.screens.home.burnPower}>
+          <View>
+            <Text>Состояние: Выключено</Text>
+            <Button buttonStyle={MainStyles.button} title="Включить" onPress={this.getStatus}></Button>
+          </View>
+        </Card>
+        <Card containerStyle={MainStyles.card} title={Locale.screens.home.temperature}>
+          <View>
+            <Text>Отопление: 54 С</Text>
+            <Text>Воздух: 54 С</Text>
+          </View>
+        </Card>
       </View>
     );
   }
