@@ -7,3 +7,6 @@ npm-debug.*
 *.mobileprovision
 dist/**/*
 package-lock.json
+android/.idea
+android/.gradle
+
