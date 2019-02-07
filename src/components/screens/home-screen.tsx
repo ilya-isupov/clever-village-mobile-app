@@ -1,10 +1,11 @@
 import React from "react";
 import { ApplicationProps } from "../../models/application-props.model";
 import { ApplicationState } from "../../models/application-state.model";
-import { Text, View, AsyncStorage, NativeSyntheticEvent, NativeTouchEvent } from "react-native";
+import { Text, View, AsyncStorage } from "react-native";
 import { Button, Icon, Card } from "react-native-elements";
 import { MainStyles } from "../styles/main-styles";
 import { Locale } from "../localization/locale";
+import { SmsService } from "../services/sms.service";
 
 export class HomeScreen extends React.Component<ApplicationProps, ApplicationState> {
   static navigationOptions = {
@@ -15,20 +16,11 @@ export class HomeScreen extends React.Component<ApplicationProps, ApplicationSta
     )
   };
 
-  componentDidMount() {
-    this.loadLogin();
-  }
-
-  loadLogin = async () => {
-    await AsyncStorage.getItem("userLogin").then((login: string | null) => {
-      //
-    });
-  }
-
-  getStatus = async (event: NativeSyntheticEvent<NativeTouchEvent>) => {
-    await AsyncStorage.getItem("controllerPhone").then((phone: string) => {
-      //
-    });
+  getStatus = () => {
+    SmsService.sendSmsToController("PSWD06021991&COM=getStatus");
+    // await AsyncStorage.getItem("controllerPhone").then((phone: string) => {
+    //   //
+    // });
   }
 
   render() {

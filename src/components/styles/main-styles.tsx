@@ -7,10 +7,11 @@ export const MainStyles = StyleSheet.create({
     backgroundColor: MainColors.backgroundColor,
     alignItems: "center",
     justifyContent: "center",
-    height: 100
+    height: "100%",
+    padding: 8
   },
   card: {
-    width: 250
+    width: "100%"
   },
   textLabel: {
     margin: 8,

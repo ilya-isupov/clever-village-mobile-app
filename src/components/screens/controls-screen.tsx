@@ -1,7 +1,7 @@
 import React from "react";
 import { ApplicationProps } from "../../models/application-props.model";
 import { ApplicationState } from "../../models/application-state.model";
-import { View, AsyncStorage } from "react-native";
+import { View } from "react-native";
 import { Button, Icon } from "react-native-elements";
 import { MainStyles } from "../styles/main-styles";
 import { Locale } from "../localization/locale";
@@ -16,9 +16,9 @@ export class ControlsScreen extends React.Component<ApplicationProps, Applicatio
   };
 
   turnBurnerOn = async () => {
-    await AsyncStorage.getItem("controllerPhone").then((phone: string) => {
-      //
-    });
+    // await AsyncStorage.getItem("controllerPhone").then((phone: string) => {
+    //   //
+    // });
   }
 
   render() {
