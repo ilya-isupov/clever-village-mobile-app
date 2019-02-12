@@ -5,9 +5,10 @@ export const MainStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: MainColors.backgroundColor,
-    alignItems: "center",
-    justifyContent: "center",
-    height: "100%",
+    padding: 8
+  },
+  pageContent: {
+    backgroundColor: MainColors.backgroundColor,
     padding: 8
   },
   card: {

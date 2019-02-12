@@ -3,10 +3,12 @@ package com.clevervillage;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.centaurwarchief.smslistener.SmsListenerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.someone.sendsms.SendSMSPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +24,9 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+            new SmsListenerPackage(),
+          new SendSMSPackage()
       );
     }
 

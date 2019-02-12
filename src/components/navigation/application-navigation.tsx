@@ -1,11 +1,9 @@
 import { createBottomTabNavigator } from "react-navigation";
 import { HomeScreen } from "../screens/home-screen";
 import { SettingsScreen } from "../screens/settings-screen";
-import { ControlsScreen } from "../screens/controls-screen";
 
 export const ApplicationNavigator = createBottomTabNavigator({
     Home: HomeScreen,
-    Controls: ControlsScreen,
     Settings: SettingsScreen
 }, {
         tabBarOptions: {

@@ -1,49 +1,101 @@
 import React from "react";
 import { ApplicationProps } from "../../models/application-props.model";
 import { ApplicationState } from "../../models/application-state.model";
-import { Text, View, AsyncStorage } from "react-native";
-import { Button, Icon, Card } from "react-native-elements";
-import { MainStyles } from "../styles/main-styles";
+import { ActivityIndicator } from "react-native";
 import { Locale } from "../localization/locale";
 import { SmsService } from "../services/sms.service";
+import SmsListener from "react-native-android-sms-listener";
+import { Container, Header, Body, Right, Card, Title, Button, Text, Icon, Content, CardItem } from 'native-base';
+import { MainStyles } from "../styles/main-styles";
 
 export class HomeScreen extends React.Component<ApplicationProps, ApplicationState> {
   static navigationOptions = {
     tabBarLabel: Locale.navigation.home,
     title: Locale.navigation.home,
     tabBarIcon: () => (
-      <Icon name="home" size={28} color="#000" />
+      <Icon name="home" color={"#000"} />
     )
   };
 
+  constructor(props: ApplicationProps) {
+    super(props);
+    this.state = {
+      loading: false,
+      phone: "+79101474692",
+      commandStatus: "Нет сообщений"
+    }
+  }
+
   getStatus = () => {
-    SmsService.sendSmsToController("PSWD06021991&COM=getStatus");
-    // await AsyncStorage.getItem("controllerPhone").then((phone: string) => {
-    //   //
-    // });
+    this.setState({
+      loading: true
+    });
+    SmsService.sendSmsToController(this.state.phone, "Test message without UI", () => {
+      let subscription = SmsListener.addListener((message: any) => {
+        if (message.originatingAddress === this.state.phone) {
+          this.setState({
+            commandStatus: `${message.body}`
+          });
+          subscription.remove();
+          this.setState({
+            loading: false
+          });
+        }
+
+      });
+    });
   }
 
   render() {
     return (
-      <View style={MainStyles.container}>
-        <Button buttonStyle={{
-          ...MainStyles.button,
-          width: 250,
-          height: 60
-        }} title="Получить статус" onPress={this.getStatus}></Button>
-        <Card containerStyle={MainStyles.card} title={Locale.screens.home.burnPower}>
-          <View>
-            <Text>Состояние: Выключено</Text>
-            <Button buttonStyle={MainStyles.button} title="Включить" onPress={this.getStatus}></Button>
-          </View>
-        </Card>
-        <Card containerStyle={MainStyles.card} title={Locale.screens.home.temperature}>
-          <View>
-            <Text>Отопление: 54 С</Text>
-            <Text>Воздух: 54 С</Text>
-          </View>
-        </Card>
-      </View>
+      <Container>
+        <Header>
+          <Body>
+            <Title>{ Locale.navigation.home }</Title>
+          </Body>
+          <Right>
+            <Button transparent onPress={this.getStatus}>
+              <Icon name='refresh' />
+            </Button>
+          </Right>
+        </Header>
+        <Content style={MainStyles.pageContent}>
+          {
+            this.state.loading &&
+            <ActivityIndicator />
+
+          }
+          <Card>
+            <CardItem header>
+              <Text>Температура</Text>
+            </CardItem>
+            <CardItem>
+              <Body>
+                <Text>Воздух: 54 С</Text>
+                <Text>Результат: {this.state.commandStatus}</Text>
+              </Body>
+            </CardItem>
+          </Card>
+          <Card>
+            <CardItem header>
+              <Text>Отопление</Text>
+            </CardItem>
+            <CardItem>
+              <Body>
+                <Text>Состояние: Выключено</Text>
+              </Body>
+            </CardItem>
+            <CardItem footer>
+              <Button block iconLeft onPress={this.getStatus}>
+                <Icon name='power' />
+                <Text>Включить</Text>
+              </Button>
+            </CardItem>
+          </Card>
+        </Content>
+
+      </Container>
+
     );
   }
 }

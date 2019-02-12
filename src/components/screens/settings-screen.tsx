@@ -1,45 +1,43 @@
 import React from "react";
 import { ApplicationProps } from "../../models/application-props.model";
 import { ApplicationState } from "../../models/application-state.model";
-import { Text, View } from "react-native";
 import { MainStyles } from "../styles/main-styles";
 import { Locale } from "../localization/locale";
-import { Icon, Input } from "react-native-elements";
+import { Container, Header, Body, Title, Icon, Content, Form, Item, Input, Label } from 'native-base';
+
 
 export class SettingsScreen extends React.Component<ApplicationProps, ApplicationState> {
   static navigationOptions = {
     tabBarLabel: Locale.navigation.settings,
     title: Locale.navigation.settings,
     tabBarIcon: () => (
-      <Icon name="reorder" size={28} color="#000" />
+      <Icon name="settings" color={"#000"} />
     )
   };
   render() {
     return (
-      <View style={MainStyles.container}>
-        <Text style={MainStyles.textLabel}>Телефон контроллера:</Text>
-        <Input
-          placeholder="Telephone"
-          leftIcon={
-            <Icon
-              name="call"
-              size={24}
-              color="black"
-            />
-          }
-        />
-        <Text style={MainStyles.textLabel}>Пароль:</Text>
-        <Input
-          placeholder="Password"
-          leftIcon={
-            <Icon
-              name="security"
-              size={24}
-              color="black"
-            />
-          }
-        />
-      </View>
+      <Container>
+        <Header>
+          <Body>
+            <Title>{ Locale.navigation.settings }</Title>
+          </Body>
+        </Header>
+        <Content style={MainStyles.pageContent}>
+          <Form>
+            <Item stackedLabel>
+              <Label>Номер контроллера</Label>
+              <Icon active name='call' />
+              <Input />
+            </Item>
+            <Item stackedLabel last>
+              <Icon active name='medical' />
+              <Label>Пароль</Label>
+              <Input />
+            </Item>
+          </Form>
+        </Content>
+
+      </Container>
     );
   }
 }

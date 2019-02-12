@@ -2,8 +2,7 @@ import React from "react";
 import { ApplicationState } from "../../models/application-state.model";
 import { ApplicationProps } from "../../models/application-props.model";
 import { Locale } from "../localization/locale";
-import { View, TextInput, AsyncStorage } from "react-native";
-import { Button } from "react-native-elements";
+import { View, TextInput, AsyncStorage, Button } from "react-native";
 import { MainStyles } from "../styles/main-styles";
 
 export class AuthScreen extends React.Component<ApplicationProps, ApplicationState> {
@@ -30,7 +29,7 @@ export class AuthScreen extends React.Component<ApplicationProps, ApplicationSta
                     editable={true}
                     maxLength={15}
                     onChangeText={this._onChangeLoginValue} />
-                <Button buttonStyle={MainStyles.button} title={Locale.buttons.auth}
+                <Button title={Locale.buttons.auth}
                     onPress={this._storeAuthentification}></Button>
             </View>
         );
