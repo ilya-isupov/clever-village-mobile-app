@@ -6,7 +6,8 @@ export const Locale = {
         controls: "Управление"
     },
     buttons: {
-        auth: "Вход"
+        auth: "Войти",
+        saveAuth: "Сохранить"
     },
     screens: {
         home: {

@@ -8,7 +8,7 @@
     "tsc": "tsc",
     "tscWatch": "tsc -w",
     "build": "yarn clean && yarn tsc",
-    "buildAndroid": "yarn build && cd android && ./gradlew assembleRelease",
+    "buildApk": "yarn build && cd android && ./gradlew assembleRelease",
     "buildWatch": "yarn run build && yarn run tsc -w",
     "clean": "rimraf dist",
     "dev": "yarn build && concurrently \"yarn tscWatch \" \"yarn android\" "

@@ -4,8 +4,21 @@ import { MainColors } from "../colors/main-colors";
 export const MainStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: MainColors.backgroundColor,
-    padding: 8
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%"
+  },
+  fullWidthcontainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%"
+  },
+  authContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    height: "100%"
   },
   pageContent: {
     backgroundColor: MainColors.backgroundColor,
@@ -31,8 +44,12 @@ export const MainStyles = StyleSheet.create({
     borderRadius: 4
   },
   button: {
-    margin: 8,
-    width: 200,
-    height: 40
+    margin: 8
+  },
+  fullButton: {
+    width: "100%"
+  },
+  formItem: {
+    margin: 8
   }
 });

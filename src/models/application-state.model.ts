@@ -1,5 +1,9 @@
+import { SystemState } from "./system-state.model";
+
 export interface ApplicationState {
     phone: string;
-    commandStatus: string;
+    systemState: SystemState;
+    password: string;
     loading: boolean;
+    isStatusActual: boolean;
 }
