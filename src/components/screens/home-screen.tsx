@@ -16,6 +16,7 @@ import {
   Icon,
   Content,
   CardItem,
+  Toast,
   Left
 } from "native-base";
 import { StateService } from "../services/state.service";
@@ -62,6 +63,33 @@ export class HomeScreen extends React.Component<ApplicationProps, ApplicationSta
     this.sendCommand(ControllerCommands.burnMachineStartHeating);
   }
 
+  processSmsResponse = () => {
+    let subscription = SmsListener.addListener((message: any) => {
+      if (message.originatingAddress === this.state.phone) {
+        let controllerResponse = message.body.trim();
+        try {
+          let systemState: SystemState = JSON.parse(controllerResponse);
+          this.setState({
+            systemState: systemState,
+            isStatusActual: true,
+            loading: false
+          });
+        } catch (error) {
+          Toast.show({
+            text: "Ошибка контроллера",
+            buttonText: "Ok",
+            type: "danger",
+            duration: 5000
+          });
+          this.setState({
+            loading: false
+          });
+        }        
+        subscription.remove();
+      }
+    });
+  }
+
   sendCommand = (command: ControllerCommand) => {
     this.setState({
       isStatusActual: false,
@@ -72,20 +100,8 @@ export class HomeScreen extends React.Component<ApplicationProps, ApplicationSta
       this.state.phone, 
       message, 
       () => {
-        let subscription = SmsListener.addListener((message: any) => {
-          if (message.originatingAddress === this.state.phone) {
-            let controllerResponse = message.body;
-            //let controllerResponse = "{\"airTemperature\": \"15\", \"burnTemperature\": \"45\", \"burnMachinePower\": \"ON\", \"burnMachineHeating\": \"ON\"}";
-            let systemState: SystemState = JSON.parse(controllerResponse);
-            this.setState({
-              systemState: systemState,
-              isStatusActual: true,
-              loading: false
-            });
-            subscription.remove();
-          }
+        this.processSmsResponse();
       });
-    });
     if (!result) {
       this.setState({
         loading: false
