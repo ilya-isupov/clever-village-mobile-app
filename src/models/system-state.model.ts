@@ -5,4 +5,5 @@ export interface SystemState {
     burnTemperature: string;
     burnMachinePower: PowerStatus;
     burnMachineHeating: PowerStatus;
+    lastUpdated?: Date;
 }

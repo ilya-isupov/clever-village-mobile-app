@@ -49,6 +49,10 @@ export const MainStyles = StyleSheet.create({
   fullButton: {
     width: "100%"
   },
+  dangerButton: {
+    width: "100%",
+    backgroundColor: "#990000"
+  },
   formItem: {
     margin: 8
   }

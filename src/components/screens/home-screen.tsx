@@ -16,6 +16,7 @@ import {
   Icon,
   Content,
   CardItem,
+  View,
   Toast,
   Left
 } from "native-base";
@@ -63,12 +64,17 @@ export class HomeScreen extends React.Component<ApplicationProps, ApplicationSta
     this.sendCommand(ControllerCommands.burnMachineStartHeating);
   }
 
+  rebootController = () => {
+    this.sendCommand(ControllerCommands.softReset);
+  }
+
   processSmsResponse = () => {
     let subscription = SmsListener.addListener((message: any) => {
       if (message.originatingAddress === this.state.phone) {
         let controllerResponse = message.body.trim();
         try {
           let systemState: SystemState = JSON.parse(controllerResponse);
+          systemState.lastUpdated = new Date();
           this.setState({
             systemState: systemState,
             isStatusActual: true,
@@ -146,6 +152,12 @@ export class HomeScreen extends React.Component<ApplicationProps, ApplicationSta
           </Right>
         </Header>
         <Content padder>
+        {
+          this.state.systemState.lastUpdated &&
+          <View>
+            <Text>Последнее обновление: {this.state.systemState.lastUpdated.getHours()}:{this.state.systemState.lastUpdated.getMinutes()}, {this.state.systemState.lastUpdated.getDate()}.{this.state.systemState.lastUpdated.getMonth() + 1}.{this.state.systemState.lastUpdated.getFullYear()}</Text>
+          </View>
+        }
           <Card>
             <CardItem header>
               <Text>Температура</Text>
@@ -164,7 +176,7 @@ export class HomeScreen extends React.Component<ApplicationProps, ApplicationSta
             <CardItem>
               <Body>
                 <Text>Состояние: {this.state.systemState.burnMachinePower}</Text>
-                <Text>Розжиг: {this.state.systemState.burnMachinePower}</Text>
+                <Text>Розжиг: {this.state.systemState.burnMachineHeating}</Text>
               </Body>
             </CardItem>
             <CardItem style={MainStyles.container}>
@@ -178,6 +190,15 @@ export class HomeScreen extends React.Component<ApplicationProps, ApplicationSta
             </CardItem>
             <CardItem style={MainStyles.container}>
               <Button block iconLeft
+                disabled={!this.checkButtonState().burnMachineStartHeating}
+                style={MainStyles.fullButton}
+                onPress={this.burnMachineStartHeating}>
+                <Icon name="sunny" />
+                <Text>Розжиг</Text>
+              </Button>
+            </CardItem>
+            <CardItem style={MainStyles.container}>
+              <Button block iconLeft
                 disabled={!this.checkButtonState().burnMachinePowerOff}
                 style={MainStyles.fullButton}
                 onPress={this.setBurnMachinePowerOff}>
@@ -185,13 +206,17 @@ export class HomeScreen extends React.Component<ApplicationProps, ApplicationSta
                 <Text>Выключить</Text>
               </Button>
             </CardItem>
+          </Card>
+          <Card>
+            <CardItem header>
+              <Text>Управление контроллером</Text>
+            </CardItem>
             <CardItem style={MainStyles.container}>
               <Button block iconLeft
-                disabled={!this.checkButtonState().burnMachineStartHeating}
-                style={MainStyles.fullButton}
-                onPress={this.burnMachineStartHeating}>
-                <Icon name="sunny" />
-                <Text>Розжиг</Text>
+                style={MainStyles.dangerButton}
+                onPress={this.rebootController}>
+                <Icon name="refresh" />
+                <Text>Перезагрузить</Text>
               </Button>
             </CardItem>
           </Card>

@@ -15,7 +15,7 @@ export class SmsService {
             Toast.show({
                 text: "Загрузка....",
                 type: "success",
-                duration: 7000
+                duration: 10000
             });
             SMS.send(12345, phone, message, callback);
             return true;
