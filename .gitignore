@@ -10,5 +10,3 @@ android/.idea
 android/.gradle
 android/app/build
 .idea
-yarn.lock
-yarn-error.log
